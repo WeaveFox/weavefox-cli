@@ -1,0 +1,22 @@
+skills/weavefox/SKILL.md
+  s_d50f6e712afc08::t_2e1bc696339810 3-8
+  s_d50f6e712afc08::t_96e1a6db42ab8b 43-44,46-48,50-52
+skills/weavefox/scripts/install.sh
+  s_d50f6e712afc08::t_f0f0ee50503043 4,20,23-24,26-72
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "e610739fb358b94e65b6a0d5ef6cd54a374fc900",
+  "prompts": {},
+  "sessions": {
+    "s_d50f6e712afc08": {
+      "agent_id": {
+        "tool": "codefuse",
+        "id": "37a6ab66-9242-442f-9d3f-5445211b600d",
+        "model": "codefuse_official_channel/GLM-5.3-Flash"
+      },
+      "human_author": "wang1212 <mrwang1212@126.com>"
+    }
+  }
+}
