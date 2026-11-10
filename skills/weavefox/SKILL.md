@@ -1,6 +1,11 @@
 ---
 name: weavefox
-description: Connect to WeaveFox open capabilities to manage apps and interact with app agents via the wf CLI.
+description: >-
+  Manage WeaveFox apps, Pages deployments, and app agents from any coding
+  agent via the wf CLI. Use when the user mentions WeaveFox, asks to list or
+  update WeaveFox apps, send messages to a WeaveFox app agent, publish or
+  deploy static sites with WeaveFox Pages, or check the authenticated
+  WeaveFox user profile.
 ---
 
 # WeaveFox
@@ -35,11 +40,16 @@ Host prebuilt static sites by uploading artifact zip packages.
 
 ## Install
 
-```bash
-# One command (auto-detects npm or binary fallback)
-bash skills/weavefox/scripts/install.sh
+Run the bundled installer from this skill's directory (the folder containing this SKILL.md):
 
-# Or manually:
+```bash
+# One command (auto-detects npm, or falls back to a checksum-verified binary download)
+bash scripts/install.sh
+```
+
+Or install manually:
+
+```bash
 npm i -g @weavefox/cli
 # or download binary from https://github.com/weavefox/weavefox-cli/releases
 ```
