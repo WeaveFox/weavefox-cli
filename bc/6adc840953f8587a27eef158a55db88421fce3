@@ -1,0 +1,21 @@
+.gitignore
+  s_d50f6e712afc08::t_d4cfd52c83add5 4
+AGENTS.md
+  s_d50f6e712afc08::t_04e1fe897362d4 49-54
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "bc6adc840953f8587a27eef158a55db88421fce3",
+  "prompts": {},
+  "sessions": {
+    "s_d50f6e712afc08": {
+      "agent_id": {
+        "tool": "codefuse",
+        "id": "37a6ab66-9242-442f-9d3f-5445211b600d",
+        "model": "codefuse_official_channel/GLM-5.3-Flash"
+      },
+      "human_author": "wang1212 <mrwang1212@126.com>"
+    }
+  }
+}
