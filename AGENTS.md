@@ -46,6 +46,12 @@ weavefox-cli/
 └── AGENTS.md
 ```
 
+## Skills
+
+- `skills/weavefox/` is the single source of truth for the agent skill (SKILL.md + scripts). `.agents/skills/weavefox/` is a local dogfood install artifact (gitignored) — never edit it directly.
+- Refresh the local dogfood copy from source after changing skill files: `npx skills add . --skill weavefox`
+- SKILL.md references bundled scripts relative to the skill's own directory (e.g. `bash scripts/install.sh`), because agents resolve paths from where the skill is installed, not from the repo layout.
+
 ## Commands
 
 ```bash
