@@ -1,6 +1,7 @@
 node_modules/
 dist/
 bin/
+.agents/
 package-lock.json
 pnpm-lock.yaml
 skills-lock.json
