@@ -1,0 +1,65 @@
+# MCP Registry Publishing
+#
+# Publishes server.json to the official MCP Registry
+# (https://registry.modelcontextprotocol.io) using GitHub OIDC —
+# no long-lived secrets required.
+#
+# Namespace: io.github.WeaveFox/* (derived from the repository owner).
+#
+# Triggered:
+#   - manually (workflow_dispatch)
+#   - when server.json or package.json changes on main
+#     (package.json changes keep the registry version in sync with releases)
+
+name: Publish MCP Registry
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'server.json'
+      - 'package.json'
+
+permissions:
+  contents: read
+  id-token: write # OIDC token for mcp-publisher login github-oidc
+
+concurrency:
+  group: publish-mcp-registry
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    name: Publish to MCP Registry
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+
+      - name: Install mcp-publisher
+        run: |
+          curl -fsSL -o /tmp/mcp-publisher.tar.gz \
+            "https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_linux_amd64.tar.gz"
+          tar -xzf /tmp/mcp-publisher.tar.gz -C /tmp
+          sudo install /tmp/mcp-publisher /usr/local/bin/mcp-publisher
+
+      - name: Sync server.json version with package.json
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          jq --arg v "$VERSION" '.version = $v' server.json > /tmp/server.json
+          mv /tmp/server.json server.json
+          echo "Publishing io.github.WeaveFox/weavefox@${VERSION}"
+
+      - name: Validate server.json
+        run: mcp-publisher validate server.json
+
+      - name: Login to MCP Registry (OIDC)
+        run: mcp-publisher login github-oidc
+
+      - name: Publish
+        run: mcp-publisher publish
