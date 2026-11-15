@@ -4,7 +4,7 @@ description: >-
   Manage WeaveFox apps, Pages deployments, and app agents from any coding
   agent via the wf CLI. Use when the user mentions WeaveFox, asks to list or
   update WeaveFox apps, send messages to a WeaveFox app agent, publish or
-  deploy static sites with WeaveFox Pages, or check the authenticated
+  deploy web apps with WeaveFox Pages, or check the authenticated
   WeaveFox user profile.
 ---
 
@@ -30,11 +30,11 @@ Iterate apps on WeaveFox by connecting external AI agent tools via open APIs.
 
 ### WeaveFox Pages
 
-Host prebuilt static sites by uploading artifact zip packages.
+Deploy a locally built project to a publicly accessible URL without buying a server or domain. Hosting, versioning, access control and SEO config are managed by WeaveFox.
 
 - Create a WeaveFox Pages app
 - Get a short-lived upload token for uploading artifact zip files
-- Create a new version from a prebuilt artifact zip
+- Create a new version from an artifact zip
 - List versions of an app with pagination
 - Deploy a specific version to make it live
 
