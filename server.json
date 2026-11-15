@@ -1,0 +1,28 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.WeaveFox/weavefox",
+  "title": "WeaveFox",
+  "description": "Manage WeaveFox apps and deploy web apps to WeaveFox Pages from any MCP client via API key.",
+  "version": "0.0.4",
+  "websiteUrl": "https://www.weavefox.cn/open",
+  "repository": {
+    "url": "https://github.com/weavefox/weavefox-cli",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://www.weavefox.cn/mcp",
+      "headers": [
+        { "name": "Authorization", "value": "Bearer <YOUR_WEAVEFOX_API_KEY>" }
+      ]
+    },
+    {
+      "type": "sse",
+      "url": "https://www.weavefox.cn/mcp",
+      "headers": [
+        { "name": "Authorization", "value": "Bearer <YOUR_WEAVEFOX_API_KEY>" }
+      ]
+    }
+  ]
+}
