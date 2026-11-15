@@ -1,0 +1,21 @@
+skills/weavefox/SKILL.md
+  s_feae0b39e2a570::t_54217935817ee2 33
+  s_feae0b39e2a570::t_84ce6c4c457050 7
+  s_feae0b39e2a570::t_e188d8bca99aa5 37
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "c13102903918009962d139fb83cb04d5d4aab7da",
+  "prompts": {},
+  "sessions": {
+    "s_feae0b39e2a570": {
+      "agent_id": {
+        "tool": "codefuse",
+        "id": "e861d64c-08f8-4ff1-a7e5-62aaa714c3f2",
+        "model": "codefuse_official_channel/GLM-5.3-Flash"
+      },
+      "human_author": "wang1212 <mrwang1212@126.com>"
+    }
+  }
+}
