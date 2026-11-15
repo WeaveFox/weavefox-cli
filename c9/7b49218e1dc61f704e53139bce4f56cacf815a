@@ -1,0 +1,24 @@
+server.json
+  s_feae0b39e2a570::t_da9412cf2cc2a1 16-18,23-25
+  s_feae0b39e2a570::t_b909968b7278c5 5
+  s_feae0b39e2a570::t_6e58f2520e9cd3 1-2,4,6-15,19-22,26-28
+  s_feae0b39e2a570::t_d0a268e5131816 3
+.github/workflows/publish-mcp.yml
+  s_feae0b39e2a570::t_fc163961a331ad 1-65
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "c97b49218e1dc61f704e53139bce4f56cacf815a",
+  "prompts": {},
+  "sessions": {
+    "s_feae0b39e2a570": {
+      "agent_id": {
+        "tool": "codefuse",
+        "id": "e861d64c-08f8-4ff1-a7e5-62aaa714c3f2",
+        "model": "codefuse_official_channel/GLM-5.3-Flash"
+      },
+      "human_author": "wang1212 <mrwang1212@126.com>"
+    }
+  }
+}
